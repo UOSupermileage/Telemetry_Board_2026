@@ -7,7 +7,7 @@
 #include "telemetry.h"
 #include "sensors.h"
 #include "processing.h"
-#include "csv_logger.h"
+//#include "csv_logger.h"
 #include "mqtt_client.h"
 
 /* Configuration */
@@ -80,7 +80,7 @@ int main(void)
    /* 3. Initialize MQTT. */
    if (!mqtt_client_init(CAR_ID)) {
       fprintf(stderr, "Failed to initialize MQTT client.\n");
-      csv_logger_close();
+      //csv_logger_close();
       sensors_cleanup();
       return 1;
    }
